@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Mi Formulario en <%= title %></h1>
+    <h1> Formulario XD </h1>
     <form action="/users" method="POST">
       <label for="">Nombre</label>
       <input name="name" type="text">
@@ -15,5 +14,16 @@
       <input name="password" type="password">
       <input type="submit">
     </form>
+
+
+
+    <h2>Lista de Usuarios</h2>
+    <div>
+    <ul>
+      <% result.forEach(function(user){ %>
+        <li><%= user.name %> <%= user.lastname %></li>
+        <% }); %>
+    </ul>
+  </div>
   </body>
 </html>
